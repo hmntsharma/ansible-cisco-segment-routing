@@ -1,0 +1,87 @@
+---
+- name: "1. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - GETTING STARTED"
+  hosts: routers !P9
+  gather_facts: false
+  vars:
+    mins: 2
+    slow_secs: 1
+    templates:
+    - ip_igp_ldp_template.j2
+    command_set_1:
+    - show ipv4 interface brief
+    - ping 12.0.0.2
+    - show isis adjacency
+    - show route
+    - show isis route 5.5.5.5/32 detail
+    - show route 5.5.5.5/32 detail
+    - show mpls ldp neighbor brief
+    - show mpls label table
+    - show mpls forwarding
+    - show cef 5.5.5.5/32
+    - traceroute mpls ipv4 5.5.5.5/32
+    - traceroute mpls multipath ipv4 5.5.5.5/32 verbose
+  tasks:
+  - name: 1.0 RENDER AND DISPLAY THE IP, ISIS & LDP CONFIGURATION
+    debug:
+      msg:
+      - "template: {{ templates[0] }}"
+      - "{{ lookup('template', templates[0]).split('\n') }}"
+
+  - name: 1.1 RENDER AND SAVE THE IP, ISIS & LDP CONFIGURATION
+    template:
+      src: "{{ templates[0] }}"
+      dest: "xrcfg/{{ hostname }}.ip_mpls.xrcfg"
+    register: output
+
+  - name: "{{ slow_secs }} secs PAUSE FOR CONVERGENCE"
+    ansible.builtin.pause:
+      seconds: "{{ slow_secs }}"
+
+  - name: 1.2 DISPLAY THE OUTPUT REGISTERED IN THE PREVIOUS TASK
+    debug:
+      var: output.dest
+
+  - name: 1.3 RENDER AND APPLY THE IP, ISIS & LDP CONFIGURATION
+    cisco.iosxr.iosxr_config:
+      src: "{{ templates[0] }}"
+      match: none
+
+  - name: "{{ mins }} mins PAUSE FOR CONVERGENCE"
+    ansible.builtin.pause:
+      minutes: "{{ mins }}"
+
+  - name: 1.4 RUN COMMANDS TO CAPTURE IP, ISIS & LDP STATE
+    cisco.iosxr.iosxr_command:
+      commands: 
+      - "{{ item }}"
+    loop: "{{ command_set_1 }}"
+    when: hostname == "PE1"
+    register: output
+
+  - name: 1.5 DISPLAY THE OUTPUT REGISTERED IN THE PREVIOUS TASK
+    debug:
+      msg:
+      - "{{ output.results[idx].stdout_lines }}"
+    loop: "{{ command_set_1 }}"
+    loop_control:
+      index_var: idx
+    when: hostname == "PE1"
+
+  - name: 1.6 RUN COMMANDS TO TRACE LABELS FROM PE1 TO PE5
+    cisco.iosxr.iosxr_command:
+      commands:
+      - show mpls forwarding prefix 5.5.5.5/32
+    when: inventory_hostname == "PE1" or hostname == "P2" or hostname == "P3" or hostname == "P7" or hostname == "P4" 
+    register: output
+
+- name: "1.x CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - GETTING STARTED"
+  hosts: PE1, P2, P3, P7, P4
+  serial: 1
+  gather_facts: false
+  tasks:
+  - name: DISPLAY THE OUTPUT REGISTERED IN THE PREVIOUS TASK
+    debug:
+      msg:
+      - "show mpls forwarding prefix 5.5.5.5/32"
+      - "{{ output.stdout_lines[0] }}"
+

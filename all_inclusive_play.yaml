@@ -1,0 +1,20 @@
+---
+# Revert topology to base stage
+- import_playbook: 0_revert_to_base_topology.yaml
+
+# Lab step by step
+- import_playbook: 1_getting_started.yaml
+- import_playbook: 2_intro_segment_routing.yaml
+- import_playbook: 3_sr_ldp_interworking.yaml
+- import_playbook: 4_tilfa.yaml
+- import_playbook: 5_zs_tilfa.yaml
+- import_playbook: 6_ss_tilfa.yaml
+- import_playbook: 7_ds_tilfa.yaml
+- import_playbook: 8_microloop_avoidance.yaml
+- import_playbook: 9_mpls_traffic_eng.yaml
+- import_playbook: 10_tilfa_ns_prep.yaml
+- import_playbook: 11_tilfa_ns_node.yaml
+- import_playbook: 12_tilfa_ns_local_srlg.yaml
+- import_playbook: 13_tilfa_ns_global_srlg.yaml
+- import_playbook: 14_tilfa_ns_node_plus_srlg.yaml
+- import_playbook: 15_tilfa_tiebrkr_link_node_srlg.yaml

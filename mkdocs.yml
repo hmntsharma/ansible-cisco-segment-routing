@@ -1,0 +1,77 @@
+---
+site_name: Ansible Cisco XRv9k Segment Routing
+site_description: A brief look at Segment Rotuing and TI-LFA on Cisco XRv9k with Ansible
+site_author: Hemant Sharma
+site_url: https://hmntsharma.github.io/ansible-cisco-segment-routing
+repo_url: https://github.com/hmntsharma/ansible-cisco-segment-routing
+repo_name: hmntsharma/ansible-cisco-segment-routing
+edit_uri: ""
+
+theme:
+  name: material
+
+  palette: 
+    - primary: white
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - primary: black
+      accent: indigo
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  icon:
+    logo: material/router
+    repo: fontawesome/brands/git-alt
+
+  favicon: material/router
+
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - abbr
+  - pymdownx.snippets
+  - footnotes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.smartsymbols
+
+extra_css:
+  - stylesheets/extra.css
+
+
+nav:
+  - Introduction : index.md
+  - Ansible-Playbook : all_inclusive_play.md
