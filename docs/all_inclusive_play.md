@@ -26,7 +26,7 @@ Resolving deltas: 100% (70/70), done.
 
 ## Revert to Base Topology
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [0. RESTORE BASE TOPOLOGY] ************************************************
 
 TASK [0.0 RENDER AND DISPLAY THE BASE CONFIGURATION] ***************************
@@ -580,7 +580,7 @@ changed: [P2]
   <figcaption>Base Topology</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [1. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - GETTING STARTED] ************
 
 TASK [1.0 RENDER AND DISPLAY THE IP, ISIS & LDP CONFIGURATION] *****************
@@ -1638,7 +1638,7 @@ ok: [P4] =>
   <figcaption>Segment Routing + LDP</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [2. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - INTRODUCE SEGMENT ROUTING] ***
 
 TASK [2.0 RENDER AND DISPLAY SEGMENT ROUTING CONFIGURATION] ********************
@@ -2120,7 +2120,7 @@ ok: [PE1] => (item=traceroute mpls ipv4 5.5.5.5/32) =>
   <figcaption>SR - LDP Interworking</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 
 PLAY [3. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - SR <-> LDP INTERWORKING] ****
 
@@ -2694,7 +2694,7 @@ changed: [P6]
   <figcaption>SR Only</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [4. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TOPOLOGY INDEPENDENT LOOPFREE ALTERNATE] ***
 
 TASK [4.0 RENDER AND DISPLAY THE TI-LFA CONFIGURATION] *************************
@@ -2981,7 +2981,7 @@ ok: [P2] => (item=show cef 5.5.5.5/32) =>
   <figcaption>Zero Segment TI-LFA</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 
 PLAY [5. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - ZERO SEGMENT TI-LFA] ********
 
@@ -3189,7 +3189,7 @@ changed: [P2]
   <figcaption>Single Segment TI-LFA</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [6. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - SINGLE SEGMENT TI-LFA] ******
 
 TASK [6.0 RENDER AND DISPLAY THE SINGLE SEGMENT TI-LFA CONFIGURATION] **********
@@ -3301,7 +3301,7 @@ ok: [P2] => (item=show cef 5.5.5.5/32) =>
   <figcaption>Double Segment TI-LFA</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [7. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - DOUBLE SEGMENT TI-LFA] ******
 
 TASK [7.0 RENDER AND DISPLAY THE DOUBLE SEGMENT TI-LFA CONFIGURATION] **********
@@ -3497,7 +3497,7 @@ changed: [P8]
   <figcaption>Microloop Avoidance</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [8. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - MICROLOOP AVOIDANCE] ********
 
 TASK [8.0 RENDER AND DISPLAY THE PREPARATION CONFIGURATION] ********************
@@ -3790,7 +3790,7 @@ changed: [P7]
 
 ## MPLS Traffic-Engineering
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [9. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - MPLS TRAFFIC-ENGINEERING] ***
 
 TASK [9.0 RENDER AND DISPLAY THE MPLS TRAFFIC-ENGINEERING CONFIGURATION] *******
@@ -3919,7 +3919,7 @@ changed: [P3]
   <figcaption>TI-LFA Node and SRLG Protection Topology</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [10. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TI-LFA NODE + SRLG PROTECTION PREPARATION] ***
 
 TASK [10.0 RENDER AND DISPLAY THE TI-LFA NODE + SRLG PROTECTION PREPARATION CONFIGURATION] ***
@@ -4013,7 +4013,7 @@ changed: [P7]
   <figcaption>TI-LFA Node Protection</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [11. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TI-LFA NODE PROTECTION] ****
 
 TASK [11.0 RENDER AND DISPLAY THE TI-LFA NODE PROTECTION CONFIGURATION] ********
@@ -4127,7 +4127,7 @@ changed: [P2]
   <figcaption>TI-LFA Local SRLG Disjoint Protection</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [12. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TI-LFA LOCAL SRLG-DISJOINT PROTECTION] ***
 
 TASK [12.0 RENDER AND DISPLAY THE TI-LFA LOCAL SRLG-DISJOINT PROTECTION CONFIGURATION] ***
@@ -4223,7 +4223,7 @@ ok: [P2] => (item=show cef 5.5.5.5/32) =>
   <figcaption>TI-LFA Global Weighted SRLG Protection</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [13. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TI-LFA GLOBAL WEIGHTED SRLG PROTECTION] ***
 
 TASK [13.0 RENDER AND DISPLAY THE TI-LFA GLOBAL WEIGHTED SRLG PROTECTION CONFIGURATION] ***
@@ -4390,7 +4390,7 @@ changed: [P2]
   <figcaption>TI-LFA Node + SRLG Protection</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [14. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TI-LFA NODE + SRLG PROTECTION] ***
 
 TASK [14.0 RENDER AND DISPLAY THE TI-LFA NODE + SRLG PROTECTION CONFIGURATION] ***
@@ -4539,7 +4539,7 @@ ok: [P2] =>
   <figcaption>SR + TI-LFA Base Topology</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 PLAY [15. CISCO XRV9K SR WITH TI-LFA LAB PLAYBOOK - TI-LFA TIEBREAKER LINK vs NODE vs SRLG PROTECTION] ***
 
 TASK [15.0 RENDER AND DISPLAY P9 PREP CONFIGURATION] ***************************
@@ -4672,7 +4672,7 @@ ok: [P2]
   <figcaption>TI-LFA Link Protection Path Preferred</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 
 TASK [15.4 RENDER AND DISPLAY THE TI-LFA LINK PROTECTION PREFER CONFIGURATION] ***
 ok: [P2] => 
@@ -4765,7 +4765,7 @@ ok: [P2] => (item=show cef 5.5.5.5/32) =>
   <figcaption>TI-LFA SRLG Protection Path Preferred</figcaption>
 </figure>
 
-```java linenumes="1" 
+```java linenums="1" 
 TASK [15.10 RENDER AND DISPLAY THE TI-LFA SRLG PROTECTION PREFER CONFIGURATION] ***
 ok: [P9] => 
   msg:
@@ -4864,7 +4864,7 @@ ok: [P2] => (item=show cef 5.5.5.5/32) =>
   <figcaption>TI-LFA NODE Protection Path Preferred</figcaption>
 </figure>
 
-```java linenumes="1"
+```java linenums="1"
 TASK [15.16 RENDER AND DISPLAY TI-LFA NODE PROTECTION PREFER CONFIGURATION] ****
 ok: [P2] => 
   msg:
