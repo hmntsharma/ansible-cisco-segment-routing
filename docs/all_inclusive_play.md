@@ -1,6 +1,8 @@
 ## Clone the Repository
 
-This topology was built in EVE-NG.
+This topology was created in EVE-NG using the Cisco XRv9k VM.
+
+Please also have a look at [this one](https://github.com/hmntsharma/ansible-cisco-xrd-sr), which is based on Cisco XRd container platform.
 
 ```java linenums="1"
 (vntdvops) lab@netdevops:~/github$ git clone https://github.com/hmntsharma/ansible-cisco-segment-routing.git
