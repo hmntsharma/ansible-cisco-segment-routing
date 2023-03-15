@@ -8,3 +8,10 @@
 
 
 <a align="center" href="https://hmntsharma.github.io/ansible-cisco-segment-routing/">Lab-Guide</a>
+
+---
+#### To run against the topology, either clone the repository or grab the pre-built docker image as shown below.
+
+```ruby
+docker pull ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest
+```
