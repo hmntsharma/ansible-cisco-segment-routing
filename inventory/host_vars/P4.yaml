@@ -15,7 +15,7 @@ interfaces:
     description: P4_to_P3
  -  name : GigabitEthernet0/0/0/4
     address: 47.0.0.4/24
-    description: P4_to_P7	
+    description: P4_to_P7
 protocols:
   isis:
    -  net: 49.0000.0000.0004.00
