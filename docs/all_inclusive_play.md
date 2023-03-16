@@ -20,8 +20,11 @@ Resolving deltas: 100% (70/70), done.
 
 Username: ```cisco``` | Password: ```cisco```
 
+Enter the password at the prompt.
+
 ```java linenums="1"
 (vntdvops) lab@netdevops:~/github/ansible-cisco-segment-routing$ ansible-playbook -u cisco -k all_inclusive_play.yaml
+SSH password:
 ```
 
 <figure markdown>
