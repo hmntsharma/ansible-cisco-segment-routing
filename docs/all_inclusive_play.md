@@ -17,8 +17,11 @@ Resolving deltas: 100% (70/70), done.
 ```
 
 ### Execute the Playbook
+
+Username: ```cisco``` | Password: ```cisco```
+
 ```java linenums="1"
-(vntdvops) lab@netdevops:~/github/ansible-cisco-segment-routing$ ansible-playbook all_inclusive_play.yaml
+(vntdvops) lab@netdevops:~/github/ansible-cisco-segment-routing$ ansible-playbook -u cisco -k all_inclusive_play.yaml
 ```
 
 <figure markdown>
