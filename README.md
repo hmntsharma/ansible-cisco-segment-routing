@@ -22,6 +22,11 @@ docker pull ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest
 
 ##### 2. Follow the lab guide for each step as you execute the ansible playbook.
 
+Username: ```cisco``` | Password: ```cisco```
+
+Enter the password at the prompt.
+
 ```ruby
-docker run -it ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest ansible-playbook all_inclusive_play.yaml
+docker run -it ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest ansible-playbook -u cisco -k all_inclusive_play.yaml
+SSH password:
 ```
