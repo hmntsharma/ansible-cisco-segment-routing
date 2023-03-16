@@ -104,8 +104,7 @@
 (vntdvops) lab@netdevops:~/github/ansible-cisco-segment-routing$ ansible-config view
 [defaults]
 host_key_checking = False
-inventory = /home/lab/ansible/ansible_cisco_xr_sr_tilfa/inventory/hosts.ini
-#log_path = /home/lab/ansible/ansible_cisco_xr_sr_tilfa/logs.txt
+inventory = inventory/hosts.ini
 forks=30
 stdout_callback = yaml
 display_skipped_hosts = false
@@ -164,8 +163,6 @@ ansible [core 2.14.3]
 (vntdvops) lab@netdevops:~/github/ansible-cisco-segment-routing$ ansible-inventory -y --host PE1
 ansible_connection: ansible.netcommon.network_cli
 ansible_network_os: cisco.iosxr.iosxr
-ansible_password: cisco
-ansible_user: cisco
 hostname: PE1
 interfaces:
 - address: 1.1.1.1/32
