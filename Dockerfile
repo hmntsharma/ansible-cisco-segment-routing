@@ -1,5 +1,10 @@
 FROM    alpine:latest
 
+LABEL   org.opencontainers.image.source=https://github.com/hmntsharma/ansible-cisco-segment-routing
+LABEL   org.opencontainers.image.authors="Hemant Sharma"
+LABEL   org.opencontainers.image.description="ansible-cisco-sr-lab"
+LABEL   org.opencontainers.image.licenses=MIT
+
 RUN     apk update && apk upgrade --available && \
         apk add openssh && \
         apk add --update python3 && \
