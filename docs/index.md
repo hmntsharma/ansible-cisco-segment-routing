@@ -1,7 +1,7 @@
 # Segment Routing Lab with Ansible
 
 <figure markdown>
-  ![heading](assets/images/heading.png){ loading=lazy }
+  ![heading](assets/images/heading-retouch.png){ loading=lazy }
   <figcaption>             Segment Routing with TI-LFA on Cisco XRv9k platform with Ansible</figcaption>
 </figure>
 
