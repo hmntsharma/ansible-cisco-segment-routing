@@ -18,10 +18,17 @@ interface MgmtEth0/RP0/CPU0/0
  ipv4 address 192.168.18.{{ protocols.isis[0].sid }} 255.255.255.0
  no shutdown
 !
-
-ssh client source-interface MgmtEth0/RP0/CPU0/0
+grpc
+ dscp cs4
+ port 57400
+ no-tls
+ max-streams 128
+ max-streams-per-user 128
+ address-family dual
+ max-request-total 256
+ max-request-per-user 32
+!
 ssh server vrf default
-
 root
 !
 

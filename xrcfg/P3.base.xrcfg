@@ -18,34 +18,17 @@ interface MgmtEth0/RP0/CPU0/0
  ipv4 address 192.168.18.3 255.255.255.0
  no shutdown
 !
-interface GigabitEthernet0/0/0/0
- shutdown
+grpc
+ dscp cs4
+ port 57400
+ no-tls
+ max-streams 128
+ max-streams-per-user 128
+ address-family dual
+ max-request-total 256
+ max-request-per-user 32
 !
-interface GigabitEthernet0/0/0/1
- shutdown
-!
-interface GigabitEthernet0/0/0/2
- shutdown
-!
-interface GigabitEthernet0/0/0/3
- shutdown
-!
-interface GigabitEthernet0/0/0/4
- shutdown
-!
-interface GigabitEthernet0/0/0/5
- shutdown
-!
-interface GigabitEthernet0/0/0/6
- shutdown
-!
-interface GigabitEthernet0/0/0/7
- shutdown
-!
-
-ssh client source-interface MgmtEth0/RP0/CPU0/0
 ssh server vrf default
-
 root
 !
 
