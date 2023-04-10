@@ -18,13 +18,8 @@ $
 
 ### Execute the Playbook
 
-Username: ```cisco``` | Password: ```cisco```
-
-Enter the password at the prompt.
-
 ```ruby linenums="1"
-$ ansible-playbook -u cisco -k all_inclusive_play.yaml
-SSH password:
+$ ansible-playbook main.yml -e ansible_user="cisco" -e ansible_password="cisco"
 ```
 
 <figure markdown>

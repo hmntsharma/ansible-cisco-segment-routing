@@ -27,12 +27,12 @@ Username: ```cisco``` | Password: ```cisco```
 Enter the password at the prompt.
 
 ```ruby
-$ docker run -it ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest ansible-playbook -u cisco -k all_inclusive_play.yaml
+$ docker run -it ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest ansible-playbook -u cisco -k main.yml
 SSH password:
 ```
 
 or
 
 ```ruby
-$ docker run -it ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest ansible-playbook all_inclusive_play.yaml -e ansible_user="cisco" -e ansible_password="cisco"
+$ docker run -it ghcr.io/hmntsharma/ansible-cisco-sr-lab:latest ansible-playbook main.yml -e ansible_user="cisco" -e ansible_password="cisco"
 ```
