@@ -16,10 +16,10 @@ RUN     apk update && apk upgrade --available && \
 
 RUN     cd /usr/lib/python3.11 && rm EXTERNALLY-MANAGED
 
-RUN     pip install paramiko && \
-        pip install ansible && \
+RUN     pip install paramiko==3.0.0 && \
+        pip install ansible==7.3.0 && \
         pip install ttp && \
-        pip install ansible-pylibssh
+        pip install ansible-pylibssh==1.1.0
 
 COPY	. /home/ansible-code
 
