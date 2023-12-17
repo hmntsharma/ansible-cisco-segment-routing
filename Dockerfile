@@ -12,8 +12,11 @@ RUN     apk update && apk upgrade --available && \
         apk add --update py3-pip && \
         apk add libssh-dev && \
         apk add gcc && \
-        apk add g++ && \
-        pip install paramiko && \
+        apk add g++
+
+RUN     cd /usr/lib/python3.11 && sudo rm EXTERNALLY-MANAGED
+
+RUN     pip install paramiko && \
         pip install ansible && \
         pip install ttp && \
         pip install ansible-pylibssh
