@@ -3,6 +3,8 @@ username cisco
  group cisco-support
  secret 10 $6$m69UO/m0cK.e3O/.$EtYXDVl3/aphJkazxKy145fyIY/./Xxt1fi7B3tjYemXr6pzHEJRNfq1DxNJ..WlAQx4wFr6kJesSGtKLv8/k/
 !
+vrf mgmt
+!
 call-home
  service active
  contact smart-licensing
@@ -12,9 +14,9 @@ call-home
   destination transport-method http
  !
 !
-
+hostname P6
 interface MgmtEth0/RP0/CPU0/0
- no ipv4 address dhcp
+ vrf mgmt
  ipv4 address 192.168.18.6 255.255.255.0
  no shutdown
 !
@@ -28,6 +30,7 @@ grpc
  max-request-total 256
  max-request-per-user 32
 !
+ssh server vrf mgmt
 ssh server vrf default
 root
 !
