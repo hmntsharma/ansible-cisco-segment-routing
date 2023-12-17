@@ -14,7 +14,7 @@ RUN     apk update && apk upgrade --available && \
         apk add gcc && \
         apk add g++
 
-RUN     cd /usr/lib/python3.11 && sudo rm EXTERNALLY-MANAGED
+RUN     cd /usr/lib/python3.11 && rm EXTERNALLY-MANAGED
 
 RUN     pip install paramiko && \
         pip install ansible && \
