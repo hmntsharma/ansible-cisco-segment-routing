@@ -14,7 +14,6 @@ call-home
   destination transport-method http
  !
 !
-hostname {{ hostname }}
 interface MgmtEth0/RP0/CPU0/0
  vrf mgmt
  ipv4 address 192.168.18.{{ protocols.isis[0].sid }} 255.255.255.0
